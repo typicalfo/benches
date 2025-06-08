@@ -1,6 +1,6 @@
 # Cross-Language Performance Benchmark
 
-A comprehensive performance comparison across 17+ programming languages, inspired by an X (Twitter) post comparing Go and Rust error handling implementations.
+A comprehensive performance comparison across 24+ programming languages, inspired by an X (Twitter) post comparing Go and Rust error handling implementations.
 
 This project was generated entirely using Claude Code with Claude 4 Opus. It has not been evaluated by experts in any of the languages. If you find errors, please submit a PR!
 
@@ -16,27 +16,33 @@ This project benchmarks functionally equivalent division functions with error ha
 
 ## 📊 Languages Covered
 
-**Popular Languages:**
-- 🐹 **Go** - Error interface pattern
-- 🦀 **Rust** - Result<T, E> pattern  
-- 🟨 **JavaScript** - Try/catch with custom Error
-- 🐍 **Python** - Custom Exception classes
-- ☕ **Java** - Exception handling
-- ⚡ **C++** - Exception classes with std::runtime_error
-- 🔧 **C** - Return codes with output parameters
-- 💜 **C#** - Exception handling with custom classes
-
-**Additional Languages:**
-- 🎭 **Haskell** - Either type for functional error handling
-- 🐪 **OCaml** - Exception-based error handling
-- 💎 **Ruby** - StandardError inheritance
-- 🌙 **Lua** - pcall error handling
-- 🍎 **Swift** - Error protocol with do-catch
-- 🏗️ **Kotlin** - Exception handling (JVM-based)
-- 🎯 **Scala** - Try/Success/Failure pattern
-- 🐪 **Perl** - eval-based error handling
-- 🐘 **PHP** - Exception classes
-- 🧠 **Brainfuck** - Esoteric demonstration
+Language | Error Handling Pattern | Category
+--- | --- | ---
+🐹 **Go** | Error interface pattern | Popular
+🦀 **Rust** | Result<T, E> pattern | Popular  
+🟨 **JavaScript** | Try/catch with custom Error | Popular
+🐍 **Python** | Custom Exception classes | Popular
+☕ **Java** | Exception handling | Popular
+⚡ **C++** | Exception classes with std::runtime_error | Popular
+🔧 **C** | Return codes with output parameters | Popular
+💜 **C#** | Exception handling with custom classes | Popular
+🎭 **Haskell** | Either type for functional error handling | Functional
+🐪 **OCaml** | Exception-based error handling | Functional
+💎 **Ruby** | StandardError inheritance | Dynamic
+🌙 **Lua** | pcall error handling | Dynamic
+⚡ **LuaJIT** | FFI optimization with pcall | High-Performance
+🍎 **Swift** | Error protocol with do-catch | Modern
+🏗️ **Kotlin** | Exception handling (JVM-based) | JVM
+🎯 **Scala** | Try/Success/Failure pattern | JVM/Functional
+🐪 **Perl** | eval-based error handling | Dynamic
+🐘 **PHP** | Exception classes | Web
+🏎️ **D** | Custom exception classes | Systems
+⚡ **Zig** | Error unions and explicit error handling | Systems
+🚀 **V** | Option types and error propagation | Systems
+🔷 **Odin** | Enum-based error codes | Systems
+🟦 **TypeScript (Bun)** | Try/catch optimized for Bun | High-Performance
+🟨 **JavaScript (Bun)** | Error handling optimized for Bun | High-Performance
+🧠 **Brainfuck** | Esoteric demonstration | Esoteric
 
 ## 🏃‍♂️ Quick Start
 
