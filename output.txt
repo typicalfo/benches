@@ -1,0 +1,51 @@
+fo in ~/Documents/code/x-code λ ./run_benchmark.sh 
+🚀 Division Performance Benchmark
+==================================
+
+Building Go binary...
+Building Rust binary...
+    Finished `release` profile [optimized] target(s) in 0.00s
+
+Running benchmarks...
+
+🟦 GO RESULTS:
+-------------
+Go Division Benchmark (Optimized)
+=================================
+Iterations: 100000000
+
+Successful divisions: 23.716958ms
+Operations per second: 4216392338
+
+Error divisions: 23.474584ms
+Operations per second: 4259926395
+
+🦀 RUST RESULTS:
+---------------
+Rust Division Benchmark (Optimized)
+===================================
+Iterations: 100000000
+
+Successful divisions: 66.623292ms
+Operations per second: 1500976565
+
+Error divisions: 33.300708ms
+Operations per second: 3002939157
+
+📊 PERFORMANCE ANALYSIS:
+=======================
+
+SUCCESSFUL DIVISIONS:
+- Go: 23.717ms | 4,216,392,338 ops/sec
+- Rust: 66.623ms | 1,500,976,565 ops/sec
+- Go is 2.81x FASTER (180% improvement)
+
+ERROR DIVISIONS:
+- Go: 23.475ms | 4,259,926,395 ops/sec  
+- Rust: 33.301ms | 3,002,939,157 ops/sec
+- Go is 1.42x FASTER (42% improvement)
+
+OVERALL WINNER: 🏆 GO WINS
+
+📊 Benchmark completed!
+

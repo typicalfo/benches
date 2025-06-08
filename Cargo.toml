@@ -1,0 +1,8 @@
+[package]
+name = "division-benchmark"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "division_bench"
+path = "src/bin/division_bench.rs"

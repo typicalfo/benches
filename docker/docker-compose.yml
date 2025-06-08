@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  multi-lang-test:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: div-test-runner
+    volumes:
+      - ../:/workspace
+      - ./test-all.sh:/workspace/test-all.sh
+      - ./results:/workspace/results
+    working_dir: /workspace
+    environment:
+      - LANG=C.UTF-8
+      - LC_ALL=C.UTF-8
+    command: ["./test-all.sh"]
+    
+  # Optional: Individual language containers for debugging
+  go-test:
+    image: golang:1.21-alpine
+    volumes:
+      - ../:/workspace
+    working_dir: /workspace
+    command: ["go", "run", "div.go"]
+    profiles: ["debug"]
+    
+  rust-test:
+    image: rust:1.75-alpine
+    volumes:
+      - ../:/workspace
+    working_dir: /workspace
+    command: ["sh", "-c", "rustc div.rs -o div_rust && ./div_rust"]
+    profiles: ["debug"]
+    
+  node-test:
+    image: node:20-alpine
+    volumes:
+      - ../:/workspace
+    working_dir: /workspace
+    command: ["node", "div.js"]
+    profiles: ["debug"]
+    
+  python-test:
+    image: python:3.11-alpine
+    volumes:
+      - ../:/workspace
+    working_dir: /workspace
+    command: ["python3", "div.py"]
+    profiles: ["debug"]
+
+volumes:
+  results:
